@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:16.2-alpine3.19
+    container_name: amize-foods
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=amize
+      - POSTGRES_PASSWORD=admamize
+      - POSTGRES_DB=amizefoods
+    volumes:
+      - "db:/var/lib/postgresql/data"
+    networks:
+      - amize
+
+networks:
+  amize:
+    driver: bridge
+
+volumes:
+  db:
