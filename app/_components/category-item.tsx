@@ -7,12 +7,13 @@ interface CategoryItemProps {
 
 const CategoryItem = async ({ category }: CategoryItemProps) => {
   return (
-    <div className="flex items-center gap-3 px-4 py-3 bg-white shadow-md rounded-full">
+    <div className="flex items-center gap-3 px-4 py-3 bg-white shadow-md rounded-full mb-3">
       <Image
         src={category.imageUrl}
         alt={category.name}
-        height={30}
-        width={30}
+        height={20}
+        width={20}
+        className="max-w-96"
       />
       <span className="font-semibold text-sm">{category.name}</span>
     </div>
