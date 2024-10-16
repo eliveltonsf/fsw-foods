@@ -24,7 +24,10 @@ const RestaurantItem = async ({ restaurant }: ProductItemProps) => {
           <span className="font-semibold text-xs">5.0</span>
         </div>
 
-        <Button className="absolute right-2 top-2 h-7 w-7 flex items-center gap-[2px] b px-2 py-[2px] rounded-full bg-gray-700 opacity-80">
+        <Button
+          size="icon"
+          className="absolute right-2 top-2 h-7 w-7 flex items-center gap-[2px] b px-2 py-[2px] rounded-full bg-gray-700 opacity-80"
+        >
           <Heart size={12} className="fill-white text-white" />
         </Button>
       </div>
